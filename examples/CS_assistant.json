@@ -1,0 +1,41 @@
+{
+    "role": "Columbia CS Department Information Assistant",
+    "user_objective": "The information assistant helps Columbia students with inquiries about the Computer Science department, including degree requirements, course information, faculty details, research opportunities, and general department resources.",
+    "builder_objective": "The assistant gathers basic information about the student (degree level, school, program) to provide personalized and relevant information based on their specific academic situation.",
+    "domain": "university computer science education",
+    "intro": "The Columbia University Department of Computer Science is one of the leading computer science departments in the United States, offering undergraduate, MS, and PhD programs. The department offers various tracks for CS majors, minors, and combined majors with other disciplines. The assistant can help students with questions about degree requirements, course offerings, prerequisites, faculty information, research opportunities, and academic resources available within the department.",
+    "task_docs": [{
+        "source": "https://www.cs.columbia.edu/",
+        "desc": "Main CS department website",
+        "num": 15
+    }, {
+        "source": "https://www.cs.columbia.edu/education/courses/",
+        "desc": "Course offerings page",
+        "num": 10
+    }, {
+        "source": "https://www.cs.columbia.edu/education/undergraduate/",
+        "desc": "Undergraduate program information",
+        "num": 5
+    }],
+    "rag_docs": [{
+        "source": "https://www.cs.columbia.edu/",
+        "desc": "Main CS department website",
+        "num": 20
+    }, {
+        "source": "https://www.cs.columbia.edu/education/",
+        "desc": "Education pages",
+        "num": 15
+    }, {
+        "source": "https://bulletin.columbia.edu/engineering/computer-science/",
+        "desc": "Official bulletin for CS programs",
+        "num": 10
+    }],
+    "tasks": [],
+    "workers": [
+        {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"},
+        {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}
+    ],
+    "tools": []
+}

@@ -1,0 +1,51 @@
+[
+    {
+        "task_name": "Provide detailed information about degree requirements for different programs",
+        "steps": [
+            "Use the MessageWorker to ask the user about the specific program they are interested in regarding degree requirements.",
+            "Once the user specifies the program, use the FaissRAGWorker to retrieve detailed information about the degree requirements from internal documentation.",
+            "Use the MessageWorker to present the detailed degree requirements to the user.",
+            "Ask the user if they need further information or have any additional questions regarding the degree requirements.",
+            "If the user has more questions, repeat the process with the appropriate worker based on the nature of the queries, otherwise, thank the user and close the interaction."
+        ]
+    },
+    {
+        "task_name": "Provide information about current and upcoming course offerings, including prerequisites and schedules",
+        "steps": [
+            "Inquire about the specific course or courses the user is interested in, including any particular details they are looking for (e.g., prerequisites, schedules).",
+            "Use the FaissRAGWorker to retrieve detailed information about the requested courses, including current and upcoming offerings, prerequisites, and schedules.",
+            "Provide the retrieved course information to the user using the MessageWorker.",
+            "Ask the user if they need further clarification or additional information about the courses.",
+            "Confirm that the user's query is fully addressed and ask if there is anything else they need help with."
+        ]
+    },
+    {
+        "task_name": "Provide detailed information about faculty members, their research interests, and contact information",
+        "steps": [
+            "Acknowledge the user's request and specify the type of information they are seeking (e.g., faculty research interests, contact information).",
+            "Use the FaissRAGWorker to search the internal documentation for detailed information about the specific faculty member's research interests and contact details.",
+            "Retrieve and compile the relevant information using the FaissRAGWorker.",
+            "Utilize the MessageWorker to deliver the compiled information to the user in a clear and concise format.",
+            "Ask the user if they need further information or assistance with related queries about the Computer Science department."
+        ]
+    },
+    {
+        "task_name": "Provide information on available research opportunities and how to get involved",
+        "steps": [
+            "Use the MessageWorker to acknowledge the user's inquiry about research opportunities and ask for any specific areas of interest within the CS department.",
+            "Utilize the FaissRAGWorker to retrieve information from the department's internal documentation about available research opportunities related to the user's areas of interest.",
+            "Use the MessageWorker to deliver the information about the relevant research opportunities and provide guidance on how to get involved, such as contacting faculty or applying for positions.",
+            "Ask if the user needs further assistance or additional information on any specific research opportunity.",
+            "Provide any additional information requested using the FaissRAGWorker if needed, and offer to assist with the next steps, such as setting up a meeting with a faculty member or filling out an application form."
+        ]
+    },
+    {
+        "task_name": "Provide information on academic resources, advising, and student services available in the department",
+        "steps": [
+            "Inquire about the specific area of interest the student wants information on (e.g., academic resources, advising, student services).",
+            "Utilize the FaissRAGWorker to retrieve detailed information from internal documentation based on the student's specified area of interest.",
+            "Deliver the retrieved information to the student using the MessageWorker.",
+            "Ask the student if they need further assistance or additional information on other areas."
+        ]
+    }
+]
